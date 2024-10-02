@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Allventas - Tu tienda virtual de confianza en Mercado Libre con productos originales."
+    />
+    <title>Allventas - Tienda Virtual</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Encabezado principal con navegación -->
+    <header>
+      <nav>
+        <section class="logo">
+          <img src="/allventas/img/avsas logo.png" alt="Logo de Allventas" style="width: 150px; height: auto;" />
+  
+        
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </section>
+    </header>
+
+    <!-- Sección de presentación sobre la tienda -->
+    <section id="inicio">
+      <h1>Bienvenido a Allventas</h1>
+      <p>
+        Tu tienda virtual de confianza en Mercado Libre. Vendemos productos
+        originales y de calidad.
+      </p>
+      <div>
+        <img src="/allventas/img/e-comerce.jpeg" alt="Imagen de la tienda Allventas" />
+      </div>
+      <button>Ver Productos</button>
+    </section>
+
+    <!-- Sección de categorías de productos -->
+    <section id="servicios">
+      <h2>Categorías de Productos</h2>
+      <ul>
+        <li>Tecnología</li>
+        <li>Deportes</li>
+        <li>Accesorios</li>
+        <li>Videojuegos</li>
+      </ul>
+    </section>
+
+    <!-- Sección de formulario de contacto -->
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <form action="enviar_mensaje.php" method="POST">
+        <!-- Campo Nombre y Apellido -->
+        <div>
+          <label for="nombre-apellido">Nombre y Apellido:</label>
+          <input
+            type="text"
+            id="nombre-apellido"
+            name="nombre-apellido"
+            required
+          />
+
+          <!-- Campo Número de Teléfono -->
+          <label for="telefono">Número de Teléfono:</label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            pattern="[0-9]{10}"
+            required
+          />
+
+          <!-- Campo Ciudad -->
+          <label for="ciudad">Ciudad:</label>
+          <input type="text" id="ciudad" name="ciudad" required />
+
+          <!-- Campo Correo Electrónico -->
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required />
+
+          <!-- Campo Mensaje -->
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+        </div>
+
+        <!-- Botón Enviar -->
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </section>
+
+    <!-- Footer con redes sociales -->
+    <footer>
+      <section>
+        <h2>Políticas</h2>
+        <ul>
+          <li><a href="privacidad.html">Política de Privacidad</a></li>
+          <li><a href="terminos.html">Términos y Condiciones</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Información de contacto</h2>
+        <p>
+          Correo electrónico:
+          <a href="mailto:info@allventas.com">info@allventas.com</a>
+        </p>
+        <p>Teléfono: <a href="tel:+123456789">+123456789</a></p>
+      </section>
+
+      <section>
+        <h2>Horarios de Atención</h2>
+        <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+        <p>Sábados: 9:00 AM - 1:00 PM</p>
+        <p>Domingos y Festivos: Cerrado</p>
+      </section>
+
+      <section>
+        <h2>Síguenos en nuestras redes sociales</h2>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-twitter"></i> X (Twitter)
+            </a>
+          </li>
+        </ul>
+      </section>
+      
+      <!-- Nueva sección con información de la universidad -->
+      <div>
+        <p><em>Nombre:</em> Norlys Castañeda</p>
+        <p><em>Cédula:</em> 20597586</p>
+        <p><em>Facultad de Ingeniería de Computación</em></p>
+        <p><em>Profesor:</em> Yerson González</p>
+        <img
+          src="/allventas/img/logo-color universidad.png"
+          alt="Logo de la Universidad"
+          style="max-width: 100px"
+        />
+      </div>
+    </footer>
+  </body>
+</html>
