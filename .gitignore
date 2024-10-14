@@ -1,0 +1,16 @@
+# node_modules: directorio generado por npm con todas las dependencias
+node_modules/
+
+# directorios de salida del build de Tailwind o cualquier otro CSS compilado
+dist/
+public/css/
+
+# logs generados por npm o el sistema
+*.log
+
+# Cache y archivos temporales
+*.tmp
+.cache/
+
+# Archivos de configuración locales que no deseas compartir
+.env
