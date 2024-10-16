@@ -1,0 +1,10 @@
+{
+  "name": "allventas",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/output.css -o ./css/styles.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}
