@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+    font-size: 2rem; /* Escala según el tamaño de fuente raíz */
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ocupa el 80% del contenedor padre */
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+.seccion {
+    margin-bottom: 80%; /* Ajusta este valor para aumentar el espacio */
+}
+
+
+/* Estilo para la lista de navegación */
+.nav-item {
+    display: block;
+    padding: 10px;
+    position: relative;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente al pasar el ratón */
+    font-weight: bold; /* Hace las letras más gruesas */
+}
+
+.nav-item:hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98px;
+    height: 40px;
+    background-color: rgba(128, 128, 128, 0.2); /* Círculo gris con opacidad */
+    border-radius: 35%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor del círculo */
+    z-index: -1; /* Coloca el círculo detrás del texto */
+}
+
+/* Para ajustar el texto bien alineado a la izquierda */
+ul {
+    padding-left: 0; /* Elimina cualquier relleno a la izquierda del ul */
+    justify-content: flex-start; /* Alinea el contenido del ul a la izquierda */
+}
+
+/* Estilo base del botón */
+.btn-productos {
+    background-color: #1f2937; /* Color gris oscuro */
+    color: white;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+}
+
+/* Hover: cambia el color a azul */
+.btn-productos:hover {
+    background-color: #2563eb; /* Azul */
+    transform: translateY(-3px); /* Efecto de elevación ligera */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+/* Estilo general para las categorías */
+.categoria {
+    background-color: #f3f4f6; /* Color base */
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Suavizado del degradado */
+.categoria:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+    background: linear-gradient(to right, rgba(37, 99, 235, 0.85), rgba(139, 92, 246, 0.85)); /* Degradado leve */
+}
+
+/* Estilo para los íconos y texto */
+.icono {
+    font-size: 3rem;
+    color: #2563eb;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+.titulo-categoria {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #374151;
+    transition: color 0.3s ease;
+}
+
+.descripcion-categoria {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Cambios al hacer hover */
+.categoria:hover .icono,
+.categoria:hover .titulo-categoria,
+.categoria:hover .descripcion-categoria {
+    color: white;
+}
+
+/* Estilo de la lista de productos (oculta por defecto) */
+.lista-productos {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0.75rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/* Mostrar la lista cuando se hace clic */
+.categoria.activa .lista-productos {
+    display: block;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+    z-index: 10; /* Asegura que la tarjeta esté por encima de las demás */
+}
+
+#carousel {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+    width: 100%; /* Asegúrate de que el carrusel ocupa el ancho completo */
+}
+
+.testimonio-card {
+    background: linear-gradient(135deg, #3B82F6, #9333EA);
+}
+
+/* Asegúrate de que el modal se vea correctamente */
+#contacto-modal {
+    display: none; /* Escondido por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+}
+
+#contacto-modal .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Estilos para el contenedor del mensaje */
+#message-box {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px; /* Espacio entre el formulario y el mensaje */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+    overflow: hidden; /* Asegura que el contenido no sobresalga */
+}
+
+/* Estilos para el mensaje de éxito */
+#success-message {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1.2rem; /* Tamaño de fuente */
+}
+
+/* Estilos para el mensaje de error */
+#error-message {
+    background-color: #F44336; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1.2rem; /* Tamaño de fuente */
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+
+
+/* Para pantallas grandes */
+@media (min-width: 768px) { /* Puedes ajustar el tamaño según tus necesidades */
+    #carousel {
+        width: 80%; /* O el ancho que prefieras en pantallas grandes */
+        margin: 0 auto; /* Centrar el carrusel */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+}
