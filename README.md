@@ -16,11 +16,12 @@ Esta landing page ha sido desarrollada para mostrar la oferta de productos de Al
 
 # 🔧 Instalación
 **Clona el repositorio:**
-1. En la terminal Copiar código
-git clone `https://github.com/Norlysc/Maquetado-HTML5-Allventas.git`
-2. Navega a la carpeta del proyecto: cd `Allventas`
-3. Instala las dependencias de Node.js: npm install
-4. Abre `index.html` en tu navegador para ver la landing page.
+1. En la terminal Copiar código git clone
+ `https://github.com/Norlysc/Allventas-Responsive-FullStack.git`
+2. Entra a la carpeta del proyecto: cd `Allventas`
+3. Instala las dependencias de Node.js: npm install,express mysql. body-parser, cors path multer
+1. Configure la base de datos MySQL. Ejecuta el siguiente script en tu gestor de bases de datos:``
+1. Para iniciar el servidor, ejecuta el siguiente comando en la terminal:node server.js y se te abrira en tu  navegador,`http://localhost:3000`
 
 # 🏷️ Sobre Allventas
 Allventas se destaca por ofrecer productos originales en diversas categorías como tecnología, deportes y accesorios. Nos esforzamos por brindar una experiencia de compra confiable y de calidad en Mercado Libre.
