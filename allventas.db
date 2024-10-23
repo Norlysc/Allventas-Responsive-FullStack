@@ -1,0 +1,134 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 23-10-2024 a las 20:59:35
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `allventasdb`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `formulario`
+--
+
+CREATE TABLE `formulario` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) DEFAULT NULL,
+  `telefono` varchar(20) DEFAULT NULL,
+  `ciudad` varchar(100) DEFAULT NULL,
+  `correo` varchar(100) DEFAULT NULL,
+  `mensaje` text DEFAULT NULL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `formulario`
+--
+
+INSERT INTO `formulario` (`id`, `nombre`, `telefono`, `ciudad`, `correo`, `mensaje`, `fecha`) VALUES
+(1, 'Norlys', '3187022171', 'San Cristobal ', 'ncastaneda30@gmail.com', 'prueba', '2024-10-21 16:59:48'),
+(2, 'Norlys', '3187022171', 'San Cristobal ', 'ncastaneda30@gmail.com', 'prueba', '2024-10-21 16:59:51'),
+(3, 'Norlys', '3187022171', 'San Cristobal ', 'ncastaneda30@gmail.com', 'prueba', '2024-10-21 17:00:07'),
+(4, 'EDICSON', '3187022171', 'MATURIN', 'di@hotmail.com', 'prueba', '2024-10-21 17:21:01'),
+(5, 'Maria', '22355655', 'Merida', 'mariam78@gmail.com', 'prueba', '2024-10-21 17:23:20'),
+(6, 'Maria', '22355655', 'Merida', 'mariam78@gmail.com', 'prueba', '2024-10-21 17:23:35'),
+(7, 'Maria', '22355655', 'Merida', 'mariam78@gmail.com', 'prueba', '2024-10-21 17:29:12'),
+(8, 'Maria', '22355655', 'Merida', 'mariam78@gmail.com', 'prueba', '2024-10-21 18:28:54'),
+(9, 'Sarahy', '25641651', 'Trujillo', 'srahy878@gmail.com', 'Prueba', '2024-10-21 18:31:58'),
+(10, 'Sarahy', '25641651', 'Trujillo', 'srahy878@gmail.com', 'Prueba', '2024-10-21 18:32:05'),
+(11, 'Sarahy', '25641651', 'Trujillo', 'srahy878@gmail.com', 'Prueba', '2024-10-21 18:32:52'),
+(12, 'Sarahy', '25641651', 'Trujillo', 'srahy878@gmail.com', 'Prueba', '2024-10-21 18:32:57'),
+(13, 'Sarahy', '25641651', 'Trujillo', 'srahy878@gmail.com', 'prueba', '2024-10-21 19:39:52'),
+(14, 'Sarahy', '25641651', 'Trujillo', 'srahy878@gmail.com', 'prueba', '2024-10-21 19:40:28'),
+(15, 'Norlys', '3187022171', 'San Cristobal ', 'mariam78@gmail.com', 'jkgiugiu', '2024-10-21 19:45:07'),
+(16, 'admin', '25641651', 'valencia', 'admin@hotmail.com', 'kdanhkjdhbjdb', '2024-10-21 19:52:29'),
+(17, 'admin', '25641651', 'valencia', 'admin@hotmail.com', 'kdanhkjdhbjdb', '2024-10-21 19:52:33'),
+(18, 'admin', '25641651', 'valencia', 'admin@hotmail.com', 'kdanhkjdhbjdb', '2024-10-21 19:53:45'),
+(19, 'Norlys', '3187022171', 'Merida', 'ncastaneda30@gmail.com', 'jhbhvfjhgcvjhv', '2024-10-21 19:59:05'),
+(20, 'Norlys', '3187022171', 'San Cristobal ', 'mariam78@gmail.com', 'uiguiyghu', '2024-10-21 20:08:44'),
+(21, 'Carlos ', '3187022171', 'San Cristobal ', 'mariam78@gmail.com', ' zxcsxcsxcs', '2024-10-21 21:11:37'),
+(22, 'kelvin', '3187022171', 'Trujillo', 'kel@gmail.com', 'dkajnldnljkdn', '2024-10-21 21:34:34'),
+(23, 'Victor', '564165132', 'MATURIN', 'victor8789@hotmail.com', 'ndfknbfjkbf', '2024-10-21 21:36:41'),
+(24, 'Norlys', '3187022171', 'San Cristobal ', 'ncastaneda30@gmail.com', 'fdedfsdf', '2024-10-21 21:36:55'),
+(25, 'Norlys', '3187022171', 'San Cristobal ', 'mariam78@gmail.com', 'dwdadda', '2024-10-21 21:37:30'),
+(26, 'Norlys', '3187022171', 'San Cristobal ', 'mariam78@gmail.com', 'jhvjucvjhv', '2024-10-21 21:41:14'),
+(27, 'Maria', '3187022171', 'Merida', 'mariam78@gmail.com', 'jbvjhvjhv', '2024-10-21 21:41:29'),
+(28, 'Maria', '3187022171', 'Merida', 'mariam78@gmail.com', 'dwdqwdqwdwded', '2024-10-22 19:06:28'),
+(29, 'Norlys Castaneda', '3118025386', 'Bogota', 'ncastaneda30@gmail.com', 'hdoahdojuhdjadh', '2024-10-23 03:15:22');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `testimonios`
+--
+
+CREATE TABLE `testimonios` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `mensaje` text NOT NULL,
+  `foto` varchar(255) NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `testimonios`
+--
+
+INSERT INTO `testimonios` (`id`, `nombre`, `mensaje`, `foto`, `fecha`) VALUES
+(1, 'Norlys', 'probando ', '1729623474271-126832704-photoYO-removebg-preview.png', '2024-10-22 18:57:54'),
+(2, 'Norlys Castaneda', 'prueba', '1729625383771-690193179-photo_2024-08-12_15-55-13-removebg-preview.png', '2024-10-22 19:29:47'),
+(3, 'Norlys Castaneda', 'prueba', '1729625388988-851344500-photo_2024-08-12_15-55-13-removebg-preview.png', '2024-10-22 19:29:51'),
+(4, 'Maria Molina', 'Prueba', '1729653284617-555461276-photoYO-removebg-preview.png', '2024-10-23 03:14:44');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `formulario`
+--
+ALTER TABLE `formulario`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `testimonios`
+--
+ALTER TABLE `testimonios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `formulario`
+--
+ALTER TABLE `formulario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT de la tabla `testimonios`
+--
+ALTER TABLE `testimonios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
