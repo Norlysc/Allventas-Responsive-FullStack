@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Allventas - Tu tienda virtual de confianza en Mercado Libre con productos originales."
+    />
+    <title>Allventas - Tienda Virtual</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+   
+  </head>
+  <body class="flex flex-col min-h-screen"
+  >
+    <!-- Header -->
+    <header
+      class="bg-white/50 text-gray-800 sticky top-0 shadow-2xl z-50 backdrop-blur-md"
+    >
+      <nav class="container mx-auto flex justify-between items-center p-4">
+        <div class="logo">
+          <a href="/">
+            <img
+              src="../img/avsas_logo-removebg-preview.png"
+              alt="Logo de Allventas"
+              class="h-16"
+            />
+          </a>
+        </div>
+
+        <!-- Botón hamburguesa -->
+        <div class="lg:hidden">
+          <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Menú de navegación -->
+        <ul
+  id="nav-menu"
+  class="hidden lg:flex space-x-6 text-xl text-slate-900"
+>
+  <li><a href="/" class="nav-item">Inicio</a></li>
+  <li><a href="/sobre-nosotros" class="nav-item">Nosotros</a></li>
+  <li><a href="/#servicios" class="nav-item">Servicios</a></li>
+  <li><a href="/#contacto" class="nav-item">Contacto</a></li>
+</ul>
+      </nav>
+
+      <!-- Menú móvil -->
+      <div
+  id="mobile-menu"
+  class="lg:hidden hidden flex-col space-y-4 p-4 bg-white shadow-lg"
+>
+  <a href="/" class="block text-xl text-gray-800">Inicio</a>
+  <a href="/sobre-nosotros" class="block text-xl text-gray-800">Nosotros</a>
+  <a href="/#servicios" class="block text-xl text-gray-800">Servicios</a>
+  <a href="/#contacto" class="block text-xl text-gray-800">Contacto</a>
+</div>
+    </header>
+    <main>
+    <!-- Sección sobre la empresa -->
+  
+    <div>
+      <section id="inicio" class="relative flex flex-col justify-between items-center p-6 md:p-10 shadow-lg">
+        <!-- Texto de la sección "Sobre Allventas" -->
+        <div class="w-full text-center md:text-left z-10 p-5 md:ml-20 md:p-9">
+          <h1 class="text-7xl md:text-7xl font-bold text-slate-800 mb-4 md:mb-6">Sobre Allventas</h1>
+          <p class="text-2xl md:text-3xl text-blue-900 mb-8 md:mb-12">
+            Allventas es una tienda virtual que se especializa en la venta de productos originales posicionada en Mercado Libre. Nos enfocamos en la
+            calidad de nuestros productos, ofreciendo una amplia gama de
+            artículos de tecnología, deportes y accesorios.
+          </p>
+        </div>
+    
+        <!-- Productos Destacados / Carrusel -->
+        <div class="w-screen p-5 md:w-1/2 md:p-9">
+          <h2 id="productos" class="text-xl md:text-2xl font-semibold text-center mt-4">Productos Destacados</h2>
+          <div class="relative overflow-hidden mt-4 md:mt-8">
+            <div class="carousel flex transition-transform duration-700" id="carousel" style="width: 100%;">
+              <!-- Productos dentro del carrusel -->
+              <div class="flex-shrink-0 w-32 h-32 md:w-48 md:h-64">
+                <img src="../img/audifonos.jpeg" alt="Audífonos de alta calidad" class="w-full object-cover h-full" />
+              </div>
+              <div class="flex-shrink-0 w-32 h-32 md:w-48 md:h-64">
+                <img src="../img/reloj-mujer.jpeg" alt="reloj-mujer" class="w-full object-cover h-full" />
+              </div>
+              <div class="flex-shrink-0 w-32 h-32 md:w-48 md:h-64">
+                <img src="../img/audifonos-p.jpeg" alt="Audífonos de alta calidad" class="w-full object-cover h-full" />
+              </div>
+              <div class="flex-shrink-0 w-32 h-32 md:w-48 md:h-64">
+                <img src="../img/roku.jpeg" alt="Altavoces Rockus" class="w-full object-cover h-full" />
+              </div>
+              <div class="flex-shrink-0 w-32 h-32 md:w-48 md:h-64">
+                <img src="../img/secador.jpeg" alt="secador" class="w-full object-cover h-full" />
+              </div>
+              <div class="flex-shrink-0 w-32 h-32 md:w-48 md:h-64">
+                <img src="../img/raquetas.jpeg" alt="Raqueta deportiva" class="w-full object-cover h-full" />
+              </div>
+              <div class="flex-shrink-0 w-32 h-32 md:w-48 md:h-64">
+                <img src="../img/cámara.jpeg" alt="Cámara de acción" class="w-full object-cover h-full" />
+              </div>
+              <div class="flex-shrink-0 w-32 h-32 md:w-48 md:h-64">
+                <img src="../img/reloj-hombre.jpeg" alt="reloj hombre" class="w-full object-cover h-full" />
+              </div>
+              <div class="flex-shrink-0 w-32 h-32 md:w-48 md:h-64">
+                <img src="../img/pistola.jpeg" alt="pistola masajeadora" class="w-full object-cover h-full" />
+              </div>
+              <div class="flex-shrink-0 w-32 h-32 md:w-48 md:h-64">
+                <img src="../img/mini.ref.jpeg" alt="refri" class="w-full object-cover h-full" />
+              </div>
+            </div>
+  
+            
+          </div>
+        </div>
+      </section>
+    </div>
+    
+
+    
+<section class="p-10 bg-gray-100 mt-12" style="background: linear-gradient(135deg, #3B82F6, #9333EA);">
+  <h2 class="text-3xl font-bold text-center text-white mb-6">Nuestra Misión, Visión y Valores</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card Misión -->
+      <div class="card bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300">
+          <i class="fas fa-bullseye text-blue-600 text-3xl mb-4"></i>
+          <h3 class="text-3xl mb-10 font-semibold">Nuestra Misión</h3>
+          <p class="text-2xl mb-4 text- " >Nuestra Misión es brindar a nuestros clientes productos de alta calidad a precios competitivos, con un enfoque en la innovación y la satisfacción del cliente.</p>
+      </div>
+
+      <!-- Card Visión -->
+      <div class="card bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300">
+          <i class="fas fa-eye text-blue-600 text-3xl mb-4"></i>
+          <h3 class="text-3xl mb-10 font-semibold">Nuestra Visión</h3>
+          <p class="text-2xl mb-4 " >Convertirnos en la tienda virtual líder en Venezuela, ofreciendo productos originales y de calidad a precios competitivos.</p>
+      </div>
+
+      <!-- Card Valores -->
+      <div class="card bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300">
+          <i class="fas fa-star text-blue-600 text-3xl mb-4"></i>
+          <h3 class="text-3xl mb-10 font-semibold">Nuestros Valores</h3>
+          <p class="text-2xl mb-4 " >Actuamos con honestidad, priorizamos la satisfacción del cliente, innovamos y aseguramos la calidad de nuestros productos.</p>
+      </div>
+
+      <!-- Card Atención al Cliente -->
+      <div class="card bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300">
+          <i class="fas fa-headset text-blue-600 text-3xl mb-4"></i>
+          <h3 class="text-3xl mb-10 font-semibold">Atención al Cliente</h3>
+          <p class="text-2xl mb-4 " >Nuestro equipo está disponible para resolver tus dudas y ofrecerte el mejor servicio, garantizando una experiencia satisfactoria.</p>
+      </div>
+
+      <!-- Card Sostenibilidad -->
+      <div class="card bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300">
+          <i class="fas fa-leaf text-blue-600 text-3xl mb-4"></i>
+          <h3 class="text-3xl mb-10 font-semibold">Sostenibilidad</h3>
+          <p class="text-2xl mb-4 " >Nos comprometemos a operar de manera responsable y a reducir nuestro impacto ambiental, cuidando el planeta para futuras generaciones.</p>
+      </div>
+
+      <!-- Card Innovación -->
+      <div class="card bg-white p-6 rounded-lg shadow-md text-center transition-transform duration-300">
+          <i class="fas fa-lightbulb text-blue-600 text-3xl mb-4"></i>
+          <h3 class="text-3xl mb-10 font-semibold">Innovación</h3>
+          <p class="text-2xl mb-4">Buscamos siempre nuevas formas de mejorar y ofrecer productos que se adapten a las tendencias del mercado.</p>
+      </div>
+  </div>
+</main>
+
+<footer class="bg-gray-800 text-white p-8 mt-16">
+  <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-14">
+      <div>
+          <h2 class="text-xl font-bold mb-2">Políticas</h2>
+          <ul>
+              <li><a href="privacidad.html" class="hover:text-blue-300">Política de Privacidad</a></li>
+              <li><a href="terminos.html" class="hover:text-blue-300">Términos y Condiciones</a></li>
+          </ul>
+      </div>
+
+      <div>
+          <h2 class="text-2xl font-bold mb-2">Información de contacto</h2>
+          <p>Correo electrónico: 
+              <a href="mailto:info@allventas.com" class="hover:text-blue-300">info@allventas.com</a>
+          </p>
+          <p>Teléfono: 
+              <a href="tel:+123456789" class="hover:text-blue-300">+123456789</a>
+          </p>
+      </div>
+
+      <div>
+          <h2 class="text-2xl font-bold mb-2">Horarios de Atención</h2>
+          <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+          <p>Sábados: 9:00 AM - 1:00 PM</p>
+          <p>Domingos y Festivos: Cerrado</p>
+      </div>
+
+      <div class="flex flex-col items-center">
+          <h2 class="text-3xl font-bold mb-2">Síguenos</h2>
+          <div class="flex space-x-4">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-5xl hover:text-blue-300">
+                  <i class="fab fa-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-5xl hover:text-blue-300">
+                  <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer" class="text-5xl hover:text-blue-300">
+                  <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" class="text-5xl hover:text-blue-300">
+                  <i class="fab fa-twitter"></i>
+              </a>
+          </div>
+      </div>
+      
+      <div class="mt-8 flex justify-center items-center text-center col-span-full lg:col-span-2">
+          <div class="mr-4">
+              <img src="./img/logo-universidad.png" alt="logo universidad" class="h-28 w-48" />
+          </div>
+          <div class="text-center">
+              <p><em>Nombre:</em> Norlys Castañeda</p>
+              <p><em>Cédula:</em> 20597586</p>
+              <p><em>Facultad de Ingeniería de Computación</em></p>
+              <p><em>Profesor:</em> Yerson Gonzalez</p>
+          </div>
+      </div>
+      
+  </section>
+</footer>
+
+        
+     
+      
+<script>
+    const carousel = document.getElementById('carousel');
+let scrollPosition = 0;
+const scrollSpeed = 2; // Velocidad de desplazamiento
+
+function moveCarousel() {
+    scrollPosition -= scrollSpeed; // Mover hacia la izquierda
+    
+    if (Math.abs(scrollPosition) >= carousel.scrollWidth / 1) {
+        // Si el carrusel ha desplazado la mitad de su contenido, reiniciar la posición
+        scrollPosition = 0;
+    }
+    
+    carousel.style.transform = `translateX(${scrollPosition}px)`;
+}
+
+// Ejecutar el movimiento continuamente (ajustar la velocidad con `scrollSpeed`)
+setInterval(moveCarousel, 20);
+
+nextButton.addEventListener('click', () => {
+  if (currentIndex < totalItems - itemsToShow) {
+    currentIndex += itemsToShow;
+  } else {
+    currentIndex = 0; // Reiniciar si llega al final
+  }
+  carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+});
+
+prevButton.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex -= itemsToShow;
+  } else {
+    currentIndex = totalItems - itemsToShow; // Ir al final si llega al inicio
+  }
+  carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+});
+
+const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        // Agregar un event listener al botón
+        menuToggle.addEventListener("click", function () {
+          // Alternar la clase 'hidden' en el menú móvil
+          mobileMenu.classList.toggle("hidden");
+        });
+    
+
+
+</script>
+
+<div class="fixed bottom-4 right-4">
+  <a
+    href="https://wa.me/1234567890"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <button
+      class="flex items-center justify-center w-16 h-16 bg-green-500 text-white text-6xl rounded-full shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-110 animate-pulse"
+    >
+      <a
+        href="https://wa.me/1234567890"
+        target="_blank"
+        rel="noopener noreferrer"
+      ></a>
+      <i class="fab fa-whatsapp fa-lg"></i>
+    </button>
+  </a>
+</div>
+
+  </body>
+</html>

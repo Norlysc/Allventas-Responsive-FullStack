@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Allventas - Tu tienda virtual de confianza en Mercado Libre con productos originales."
+    />
+    <title>Allventas - Tienda Virtual</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Enlace a Tailwind CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header
+      class="bg-white/50 text-gray-800 sticky top-0 shadow-2xl z-50 backdrop-blur-md"
+    >
+      <nav class="container mx-auto flex justify-between items-center p-4">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="./img/avsas_logo-removebg-preview.png"
+              alt="Logo de Allventas"
+              class="h-16"
+            />
+          </a>
+        </div>
+        <div class="nav-links hidden md:flex space-x-6 text-xl text-slate-900">
+          <a
+            href="sobre-nosotros.html"
+            class="nav-item hover:text-gray-600 transition-colors duration-300"
+            >Nosotros</a
+          >
+          <a
+            href="index.html#servicios"
+            class="nav-item hover:text-gray-600 transition-colors duration-300"
+            >Servicios</a
+          >
+          <a
+            href="index.html#contacto"
+            class="nav-item hover:text-gray-600 transition-colors duration-300"
+            >Contacto</a
+          >
+        </div>
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden flex-col space-y-4 p-4 bg-white shadow-lg"
+      >
+        <a
+          href="sobre-nosotros.html"
+          class="block text-xl text-gray-800 hover:text-gray-600 transition-colors duration-300"
+          >Nosotros</a
+        >
+        <a
+          href="index.html#servicios"
+          class="block text-xl text-gray-800 hover:text-gray-600 transition-colors duration-300"
+          >Servicios</a
+        >
+        <a
+          href="index.html#contacto"
+          class="block text-xl text-gray-800 hover:text-gray-600 transition-colors duration-300"
+          >Contacto</a
+        >
+      </div>
+    </header>
+    <main class="relative flex-grow">
+      <!-- Óvalos decorativos -->
+      <div class="absolute inset-0 flex justify-center items-center">
+        <div
+          class="absolute rounded-full shadow-2xl bg-gradient-to-r from-blue-600 to-purple-600"
+          style="width: 300px; height: 300px; left: 80%; top: 50%; z-index: 0"
+        ></div>
+        <div
+          class="absolute rounded-full shadow-2xl bg-gradient-to-r from-blue-600 to-purple-600"
+          style="width: 200px; height: 200px; left: 15%; top: 60%; z-index: 0"
+        ></div>
+        <div
+          class="absolute rounded-full shadow-2xl bg-gradient-to-r from-blue-600 to-purple-600"
+          style="width: 150px; height: 150px; left: 70%; top: 30%; z-index: 0"
+        ></div>
+        <div
+          class="absolute rounded-full shadow-2xl bg-gradient-to-r from-blue-600 to-purple-600"
+          style="width: 100px; height: 100px; left: 33%; top: 60%; z-index: 0"
+        ></div>
+        <div
+          class="absolute rounded-full shadow-2xl bg-gradient-to-r from-blue-600 to-purple-600"
+          style="width: 100px; height: 100px; left: 3%; top: 10%; z-index: 0"
+        ></div>
+        <div
+          class="absolute rounded-full shadow-2xl bg-gradient-to-r from-blue-600 to-purple-600"
+          style="width: 80px; height: 80px; left: 25%; top: 20%; z-index: 0"
+        ></div>
+      </div>
+
+      <!-- Modal (Formulario de Contacto) -->
+      <div
+        id="contacto-modal"
+        class=" justify-center items-center bg-black bg-opacity-50 fixed inset-0 hidden"
+      >
+        <div
+          class="w-full max-w-lg p-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-2xl"
+        >
+          <h2 class="text-3xl font-bold text-white mb-3 text-center">
+            Contáctanos
+          </h2>
+
+          <!-- Mensaje de respuesta -->
+          <div id="response-message" class="mb-4 hidden"></div>
+
+          <form
+            id="contact-form"
+            action="/enviar-formulario"
+            method="POST"
+            class="space-y-4"
+          >
+            <div>
+              <label for="nombre-apellido" class="block text-white"
+                >Nombre y Apellido:</label
+              >
+              <input
+                type="text"
+                id="nombre-apellido"
+                name="nombre"
+                required
+                class="w-full p-2 rounded"
+              />
+            </div>
+            <div>
+              <label for="telefono" class="block text-white">Teléfono:</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                class="w-full p-2 rounded"
+              />
+            </div>
+            <div>
+              <label for="ciudad" class="block text-white">Ciudad:</label>
+              <input
+                type="text"
+                id="ciudad"
+                name="ciudad"
+                required
+                class="w-full p-2 rounded"
+              />
+            </div>
+            <div>
+              <label for="correo" class="block text-white"
+                >Correo Electrónico:</label
+              >
+              <input
+                type="email"
+                id="correo"
+                name="correo"
+                required
+                class="w-full p-2 rounded"
+              />
+            </div>
+            <div>
+              <label for="mensaje" class="block text-white">Mensaje:</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                required
+                class="w-full p-2 rounded"
+              ></textarea>
+            </div>
+            <div
+              class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 mt-4"
+            >
+              <button
+                type="submit"
+                class="w-full md:w-auto p-3 bg-gray-800 text-white text-center hover:bg-green-500 transition duration-300 rounded-lg"
+              >
+                Enviar Mensaje
+              </button>
+
+              <button
+                type="button"
+                id="close-modal"
+                class="w-full md:w-auto p-3 bg-red-700 text-white text-center hover:bg-red-500 transition duration-300 rounded-lg"
+              >
+                Cerrar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="message-box">
+        <div id="success-message" class="hidden"></div>
+        <div id="error-message" class="hidden"></div>
+        <div id="response-message" class="hidden"></div>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mostrar y ocultar el menú móvil
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Mostrar el modal al cargar la página
+        const modal = document.getElementById("contacto-modal");
+        if (modal) {
+          modal.classList.remove("hidden");
+        }
+
+        // Manejo del botón de cerrar para redirigir a la página principal
+        const closeModalButton = document.getElementById("close-modal");
+        if (closeModalButton) {
+          closeModalButton.addEventListener("click", function () {
+            document.getElementById("contacto-modal").style.display = "none";
+          });
+        }
+
+        // Manejo del formulario
+        const contactForm = document.getElementById("contact-form");
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita el envío convencional
+
+            const nombre = document.getElementById("nombre-apellido").value;
+            const telefono = document.getElementById("telefono").value;
+            const ciudad = document.getElementById("ciudad").value;
+            const correo = document.getElementById("correo").value;
+            const mensaje = document.getElementById("mensaje").value;
+
+            // Verificar que todos los campos están llenos
+            if (
+              [nombre, telefono, ciudad, correo, mensaje].some(
+                (field) => field === ""
+              )
+            ) {
+              showMessage("Por favor, completa todos los campos.", "error");
+            } else {
+              // Enviar datos al servidor
+              const data = { nombre, telefono, ciudad, correo, mensaje };
+              fetch("/enviar-formulario", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+              })
+                .then((response) => {
+                  if (response.ok) {
+                    showMessage("Mensaje guardado exitosamente", "success");
+                    contactForm.reset(); // Resetea el formulario
+                  } else {
+                    showMessage("Error al guardar el mensaje", "error");
+                  }
+                })
+                .catch((error) => {
+                  console.error("Error:", error);
+                  showMessage(
+                    "Ocurrió un error al enviar el formulario.",
+                    "error"
+                  );
+                });
+            }
+          });
+        }
+
+        // Función para mostrar mensajes
+        function showMessage(message, type) {
+          const successMessage = document.getElementById("success-message");
+          const errorMessage = document.getElementById("error-message");
+
+          if (type === "success") {
+            successMessage.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+            successMessage.classList.remove("hidden");
+            errorMessage.classList.add("hidden");
+          } else {
+            errorMessage.innerHTML = `<i class="fas fa-times-circle"></i> ${message}`;
+            errorMessage.classList.remove("hidden");
+            successMessage.classList.add("hidden");
+          }
+
+          // Estilos
+          const messageBox = type === "success" ? successMessage : errorMessage;
+          messageBox.style.cssText = `
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;  /* Asegura que esté sobre el formulario */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el mensaje */
+  max-width: 400px;
+  min-height: 100px;
+  margin: auto;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: ${type === "success" ? "#25bd25" : "red"};
+  color: white;
+  font-size: 18px; /* Aumenta el tamaño de la fuente */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+`;
+
+          // Ocultar el mensaje después de 3 segundos
+          setTimeout(() => {
+            messageBox.classList.add("hidden");
+            messageBox.style.display = "none";
+          }, 3000);
+        }
+      });
+    </script>
+  </body>
+</html>
