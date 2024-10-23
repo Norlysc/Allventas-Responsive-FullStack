@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 h1 {
-  font-size: 2rem; /* Escala según el tamaño de fuente raíz */
+  font-size: 2rem; /* Escala según el tamaño de Fuente Raíz */
 }
 
 img {
@@ -12,7 +12,7 @@ img {
 }
 
 .seccion {
-  margin-bottom: 80%; /* Ajusta este valor para aumentar el espacio */
+  margin-bottom: 80%; /* Ajusta este valor para Aumentar el Espacio */
 }
 
 /* Estilo para la lista de navegación */
@@ -88,7 +88,7 @@ ul {
   ); /* Degradado leve */
 }
 
-/* Estilo para los íconos y texto */
+/* Estilo para los íconos y Texto */
 .icono {
   font-size: 3rem;
   color: #2563eb;
