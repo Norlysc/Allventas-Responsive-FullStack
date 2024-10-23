@@ -31,7 +31,7 @@
           <a href="index.html#contacto" class="nav-item hover:text-gray-600 transition-colors duration-300">Contacto</a>
         </div>
         <div class="lg:hidden">
-          <button id="menu-toggle" class="text-gray-800 lg:text-gray-800 lg:bg-white focus:outline-none bg-white">
+          <button id="menu-toggle" class="text-gray-800 lg:text-gray-800 lg:bg-white focus:outline-none ">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -39,7 +39,7 @@
         </div>
         </div>
       </nav>
-      <div id="mobile-menu" class="lg:hidden hidden flex-col space-y-4 p-4 bg-white shadow-lg">
+      <div id="mobile-menu" class="lg:hidden hidden flex-col space-y-4 p-4 shadow-lg">
         <a href="sobre-nosotros.html" class="block text-xl text-gray-800 hover:text-gray-600 transition-colors duration-300">Nosotros</a>
         <a href="index.html#servicios" class="block text-xl text-gray-800 hover:text-gray-600 transition-colors duration-300">Servicios</a>
         <a href="index.html#contacto" class="block text-xl text-gray-800 hover:text-gray-600 transition-colors duration-300">Contacto</a>
@@ -47,19 +47,26 @@
     </header>
 
     <main>
-      <section id="inicio" class="relative flex flex-col-reverse md:flex-row justify-between items-center shadow-lg bg-gradient-to-r from-blue-500 to-purple-500">
-        <div class="w-full md:w-1/2 text-left z-10 ml-0 md:ml-20 p-9 px-10 ">
-          <h1 class="text-5xl md:text-7xl font-bold text-blue-900 ml-10 mb-7">Bienvenidos a Allventas</h1>
-          <p class="text-3xl xl md:text-3xl text-slate-950 mb-6 ">
+      <section id="inicio" class="relative flex flex-col md:flex-row justify-between items-center shadow-lg bg-gradient-to-r from-blue-500 to-purple-500">
+        <div class="w-full md:w-1/2 text-left z-10 md:ml-20 p-9 px-10">
+          <h1 class="text-5xl md:text-7xl font-bold text-blue-900 ml-10 mb-7">
+            Bienvenidos a Allventas
+          </h1>
+          <p class="text-3xl md:text-3xl text-slate-950 mb-6">
             Tu tienda virtual de confianza en Mercado Libre. Vendemos productos originales y de calidad.
           </p>
           <br>
-          <button onclick="location.href='sobre-nosotros.html#inicio'" class="btn-productos">Nosotros</button>
+          <button onclick="location.href='sobre-nosotros.html#inicio'" class="btn-productos bg-blue-600 text-white py-2 px-6 rounded-lg transition transform hover:-translate-y-1 hover:bg-green-500 duration-300">
+            Nosotros
+          </button>
         </div>
-        <div class="w-full md:mb-0 relative">
+        
+        <!-- Imagen que se coloca debajo en móviles y al lado en pantallas más grandes -->
+        <div class="w-full md:w-1/2 mb-8 md:mb-0 relative">
           <img src="./img/Desarrollo-tiendas-online.jpg" alt="Imagen de la tienda Allventas" class="h-full w-full object-cover" />
         </div>
       </section>
+      
 
         
     
@@ -366,107 +373,92 @@
       </div>
     </main>
 
-    <footer class="bg-gray-800 text-white p-8 mt-16">
-      <section
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-14"
-      >
-        <div>
-          <h2 class="text-xl lg:text-2xl font-bold mb-2">Políticas</h2>
-          <ul>
+    <footer class="bg-gray-800 text-white p-6 md:p-8 mt-16">
+      <section class="flex flex-col md:grid md:grid-cols-4 gap-4">
+        <div class="mb-4 md:mb-0">
+          <h2 class="text-lg md:text-xl font-bold mb-2">Políticas</h2>
+          <ul class="text-sm md:text-base">
             <li>
-              <a href="privacidad.html" class="hover:text-blue-300"
-                >Política de Privacidad</a
-              >
+              <a href="privacidad.html" class="hover:text-blue-300">Política de Privacidad</a>
             </li>
             <li>
-              <a href="terminos.html" class="hover:text-blue-300"
-                >Términos y Condiciones</a
-              >
+              <a href="terminos.html" class="hover:text-blue-300">Términos y Condiciones</a>
             </li>
           </ul>
         </div>
-
-        <div>
-          <h2 class="text-xl lg:text-2xl font-bold mb-2">
-            Información de contacto
-          </h2>
-          <p>
-            Correo electrónico:
-            <a href="mailto:info@allventas.com" class="hover:text-blue-300"
-              >info@allventas.com</a
-            >
+    
+        <div class="mb-4 md:mb-0">
+          <h2 class="text-lg md:text-xl font-bold mb-2">Contacto</h2>
+          <p class="text-sm md:text-base">
+            Correo: <a href="mailto:info@allventas.com" class="hover:text-blue-300">info@allventas.com</a>
           </p>
-          <p>
-            Teléfono:
-            <a href="tel:+123456789" class="hover:text-blue-300">+123456789</a>
+          <p class="text-sm md:text-base">
+            Teléfono: <a href="tel:+123456789" class="hover:text-blue-300">+123456789</a>
           </p>
         </div>
-
-        <div>
-          <h2 class="text-xl lg:text-2xl font-bold mb-2">
-            Horarios de Atención
-          </h2>
-          <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
-          <p>Sábados: 9:00 AM - 1:00 PM</p>
-          <p>Domingos y Festivos: Cerrado</p>
+    
+        <div class="mb-4 md:mb-0">
+          <h2 class="text-lg md:text-xl font-bold mb-2">Horarios</h2>
+          <p class="text-sm md:text-base">Lun - Vie: 9:00 AM - 6:00 PM</p>
+          <p class="text-sm md:text-base">Sáb: 9:00 AM - 1:00 PM</p>
+          <p class="text-sm md:text-base">Domingos: Cerrado</p>
         </div>
-
-        <div class="flex flex-col items-center">
-          <h2 class="text-xl lg:text-3xl font-bold mb-2">Síguenos</h2>
+    
+        <div class="flex flex-col items-center mb-4 md:mb-0 p-4">
+          <h2 class="text-lg md:text-xl font-bold mb-2">Síguenos</h2>
           <div class="flex space-x-4">
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-4xl lg:text-5xl hover:text-blue-300"
-            >
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-3xl hover:text-blue-300">
               <i class="fab fa-facebook"></i>
             </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-4xl lg:text-5xl hover:text-blue-300"
-            >
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-3xl hover:text-blue-300">
               <i class="fab fa-instagram"></i>
             </a>
-            <a
-              href="https://wa.me/123456789"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-4xl lg:text-5xl hover:text-blue-300"
-            >
+            <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer" class="text-3xl hover:text-blue-300">
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a
-              href="https://www.x.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-4xl lg:text-5xl hover:text-blue-300"
-            >
+            <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" class="text-3xl hover:text-blue-300">
               <i class="fab fa-twitter"></i>
             </a>
           </div>
         </div>
-
-        <div
-          class="mt-8 flex justify-center items-center text-center col-span-full lg:col-span-2"
-        >
-          <div class="mr-4">
-            <img
-              src="./img/logo-universidad.png"
-              alt="logo universidad"
-              class="h-16 w-36 lg:h-28 lg:w-48"
-            />
+      </section>
+      <section class="mt-8 flex justify-center items-center text-center col-span-full lg:col-span-2">
+     
+        <div class=" p-6 rounded-lg shadow-lg max-w-md mx-auto text-center space-y-4">
+          <h2 class="text-3xl font-bold text-white">Datos del equipo</h2>
+          <p><strong>Facultad:</strong> Ingeniería de Computación</p>
+            <p><strong>Profesor:</strong> Yerson Gonzalez</p>
+          <div class="text-lg text-white">
+            
+            <div class="flex justify-center mb-4">
+              <img
+                src="./img/logo-universidad.png"
+                alt="logo universidad"
+                class="h-20 w-20 lg:h-20 lg:w-20 object-contain blink-effect"
+              />
+            </div>
+            
+            <p><strong>Nombre:</strong> Norlys Castañeda</p>
+            <p><strong>Cédula:</strong> 20.597.586</p>
+            
           </div>
-          <div class="text-center">
-            <p><em>Nombre:</em> Norlys Castañeda</p>
-            <p><em>Cédula:</em> 20597586</p>
-            <p><em>Facultad de Ingeniería de Computación</em></p>
-            <p><em>Profesor:</em> Yerson Gonzalez</p>
+          
+          <hr class="border-white">
+          
+          <div class="text-lg text-white">
+            <p><strong>Nombre:</strong> María Molina Zambrano</p>
+            <p><strong>Cédula:</strong> 27.229.410</p>
+          </div>
+        
+          <hr class="border-white">
+          
+          <div class="text-lg text-white">
+            <p><strong>Nombre:</strong> Sarahy Ocanto González</p>
+            <p><strong>Cédula:</strong> 30.140.127</p>
           </div>
         </div>
-      </section>
+      </div>
+   </section>
     </footer>
 
     <script>

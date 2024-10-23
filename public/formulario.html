@@ -121,104 +121,112 @@
 
       <!-- Modal (Formulario de Contacto) -->
       <div
-        id="contacto-modal"
-        class=" justify-center items-center bg-black bg-opacity-50 fixed inset-0 hidden"
+      id="contacto-modal"
+      class=" flex justify-center items-center mt-14 fixed inset-0  "
+    >
+      <div
+        class="w-full max-w-lg sm:max-w-sm p-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-2xl mx-4"
       >
-        <div
-          class="w-full max-w-lg p-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-2xl"
+        <h2 class="text-2xl sm:text-xl font-bold text-white mb-3 text-center">
+          Contáctanos
+        </h2>
+    
+        <!-- Mensaje de respuesta -->
+        <div id="response-message" class="mb-4 hidden"></div>
+    
+        <form
+          id="contact-form"
+          action="/enviar-formulario"
+          method="POST"
+          class="space-y-4"
         >
-          <h2 class="text-3xl font-bold text-white mb-3 text-center">
-            Contáctanos
-          </h2>
-
-          <!-- Mensaje de respuesta -->
-          <div id="response-message" class="mb-4 hidden"></div>
-
-          <form
-            id="contact-form"
-            action="/enviar-formulario"
-            method="POST"
-            class="space-y-4"
-          >
-            <div>
-              <label for="nombre-apellido" class="block text-white"
-                >Nombre y Apellido:</label
-              >
-              <input
-                type="text"
-                id="nombre-apellido"
-                name="nombre"
-                required
-                class="w-full p-2 rounded"
-              />
-            </div>
-            <div>
-              <label for="telefono" class="block text-white">Teléfono:</label>
-              <input
-                type="tel"
-                id="telefono"
-                name="telefono"
-                required
-                class="w-full p-2 rounded"
-              />
-            </div>
-            <div>
-              <label for="ciudad" class="block text-white">Ciudad:</label>
-              <input
-                type="text"
-                id="ciudad"
-                name="ciudad"
-                required
-                class="w-full p-2 rounded"
-              />
-            </div>
-            <div>
-              <label for="correo" class="block text-white"
-                >Correo Electrónico:</label
-              >
-              <input
-                type="email"
-                id="correo"
-                name="correo"
-                required
-                class="w-full p-2 rounded"
-              />
-            </div>
-            <div>
-              <label for="mensaje" class="block text-white">Mensaje:</label>
-              <textarea
-                id="mensaje"
-                name="mensaje"
-                required
-                class="w-full p-2 rounded"
-              ></textarea>
-            </div>
-            <div
-              class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 mt-4"
+          <div>
+            <label for="nombre-apellido" class="block text-white text-sm sm:text-xs"
+              >Nombre y Apellido:</label
             >
-              <button
-                type="submit"
-                class="w-full md:w-auto p-3 bg-gray-800 text-white text-center hover:bg-green-500 transition duration-300 rounded-lg"
-              >
-                Enviar Mensaje
-              </button>
-
-              <button
-                type="button"
-                id="close-modal"
-                class="w-full md:w-auto p-3 bg-red-700 text-white text-center hover:bg-red-500 transition duration-300 rounded-lg"
-              >
-                Cerrar
-              </button>
-            </div>
-          </form>
-        </div>
+            <input
+              type="text"
+              id="nombre-apellido"
+              name="nombre"
+              required
+              class="w-full p-2 rounded text-sm sm:text-xs"
+            />
+          </div>
+          <div>
+            <label for="telefono" class="block text-white text-sm sm:text-xs"
+              >Teléfono:</label
+            >
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              required
+              class="w-full p-2 rounded text-sm sm:text-xs"
+            />
+          </div>
+          <div>
+            <label for="ciudad" class="block text-white text-sm sm:text-xs"
+              >Ciudad:</label
+            >
+            <input
+              type="text"
+              id="ciudad"
+              name="ciudad"
+              required
+              class="w-full p-2 rounded text-sm sm:text-xs"
+            />
+          </div>
+          <div>
+            <label for="correo" class="block text-white text-sm sm:text-xs"
+              >Correo Electrónico:</label
+            >
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              required
+              class="w-full p-2 rounded text-sm sm:text-xs"
+            />
+          </div>
+          <div>
+            <label for="mensaje" class="block text-white text-sm sm:text-xs"
+              >Mensaje:</label
+            >
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              required
+              class="w-full p-2 rounded text-sm sm:text-xs"
+            ></textarea>
+          </div>
+          <div
+            class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 mt-4"
+          >
+            <button
+              type="submit"
+              class="w-full md:w-auto p-2 bg-gray-800 text-white text-center text-sm hover:bg-green-500 transition duration-300 rounded-lg"
+            >
+              Enviar Mensaje
+            </button>
+    
+            <button
+              type="button"
+              id="close-modal"
+              class="w-full md:w-auto p-2 bg-red-700 text-white text-center text-sm hover:bg-red-500 transition duration-300 rounded-lg"
+            >
+              Cerrar
+            </button>
+          </div>
+        </form>
       </div>
-      <div id="message-box">
-        <div id="success-message" class="hidden"></div>
-        <div id="error-message" class="hidden"></div>
-        <div id="response-message" class="hidden"></div>
-      </div>
+    </div>
+    
+    <div id="message-box">
+      <div id="success-message" class="hidden"></div>
+      <div id="error-message" class="hidden"></div>
+      <div id="response-message" class="hidden"></div>
+    </div>
+    
     </main>
 
     <script>

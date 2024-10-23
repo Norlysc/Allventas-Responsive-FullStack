@@ -236,6 +236,18 @@ ul {
     background: linear-gradient(90deg, #4338ca, #d946ef); /* Cambia colores al pasar el mouse */
   }
 
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .blink-effect {
+    animation: blink 2s infinite;
+  }
 /* Media query para pantallas pequeñas (hasta 768px) */
 @media (max-width: 768px) {
   #carousel {
